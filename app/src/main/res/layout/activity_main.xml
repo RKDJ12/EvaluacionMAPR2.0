@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Imagen en la parte superior -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/completedtask" />
+
+    <!-- Campo para añadir el nombre de la tarea -->
+    <EditText
+        android:id="@+id/editTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:hint="Nombre de la tarea"
+        android:padding="16dp" />
+
+    <!-- Campo para añadir la descripción de la tarea -->
+    <EditText
+        android:id="@+id/editTaskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTaskName"
+        android:hint="Descripción de la tarea"
+        android:padding="16dp" />
+
+    <!-- Botón para seleccionar la fecha de la tarea -->
+    <Button
+        android:id="@+id/buttonSelectDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTaskDescription"
+        android:text="Seleccionar Fecha"
+        android:padding="16dp" />
+
+    <!-- Botón para añadir la tarea -->
+    <Button
+        android:id="@+id/buttonAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSelectDate"
+        android:text="Añadir Tarea"
+        android:padding="16dp" />
+
+    <!-- RecyclerView para mostrar las tareas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonAddTask"
+        android:padding="16dp" />
+</RelativeLayout>
